@@ -1,0 +1,1 @@
+add_executable(command-pattern main.cpp)
