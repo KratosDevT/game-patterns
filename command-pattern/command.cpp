@@ -1,6 +1,7 @@
 #pragma once
 
 #include <iostream>
+#include "fsm.cpp"
 
 namespace LOGIC
 {
@@ -12,15 +13,6 @@ namespace LOGIC
         virtual ~Command() = default;
         Command() = default;
         virtual void execute() = 0;
-    };
-
-    class FSMTransitionCommand : public Command
-    {
-
-    public:
-        virtual void execute() override
-        {
-        }
     };
 
     class ISaveable
@@ -44,6 +36,26 @@ namespace LOGIC
         {
             Target = target;
         }
+        virtual void execute() override;
+    };
+
+    class TransitionCommand : public Command
+    {
+    private:
+        FSM* TargetFSM = nullptr;
+        std::string StateToTransition;
+
+    public:
+        
+        TransitionCommand() = default;
+
+        TransitionCommand(FSM *target, const std::string &stateName)
+        {
+            TargetFSM = target;
+            StateToTransition = stateName;
+        }
+
+        bool CanDoTransition();
         virtual void execute() override;
     };
 }
