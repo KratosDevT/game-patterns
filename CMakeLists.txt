@@ -9,4 +9,4 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 add_subdirectory(command-pattern)
-# poi aggiungerai: add_subdirectory(observer-pattern), ecc.
+# poi aggiungere: add_subdirectory(observer-pattern), ecc.
