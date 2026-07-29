@@ -27,7 +27,6 @@ Il command pattern si inserisce in questo contesto andando a creare il Command
 
 The Command pattern suggests that GUI objects shouldn’t send these requests directly. Instead, you should extract all of the request details, such as the object being called, the name of the method and the list of arguments into a separate command class with a single method that triggers this request.
 
-
-
+Build project with CMake configure
 
 

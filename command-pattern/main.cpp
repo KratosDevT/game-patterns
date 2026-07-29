@@ -3,6 +3,8 @@
 #include <vector>
 #include <unordered_map>
 
+#include "fmt/format.h"
+
 #include "fsm.cpp"
 #include "ui.cpp"
 #include "command.cpp"
@@ -47,7 +49,8 @@ void LOGIC::TransitionCommand::execute()
 
 int main()
 {
-    std::cout << "C++ standard: " << __cplusplus << "\n";
+    fmt::print("C++ standard: ");
+    std::cout << __cplusplus << "\n";
 
     LOGIC::MenuFSM *menuFSM = new LOGIC::MenuFSM();
     menuFSM->addState(new IdleState(), true);
