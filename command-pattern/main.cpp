@@ -57,18 +57,17 @@ int main()
     menuFSM->addState(new PlayingState());
     menuFSM->start();
 
-    UI::Button *buttonTransition = new UI::Button();
-    UI::Button *buttonSave = new UI::Button();
-    UI::Page *page = new UI::Page(buttonSave, buttonTransition);
+    UI::Button *button1 = new UI::Button();
+    UI::Button *button2 = new UI::Button();
+    UI::Page *page = new UI::Page(button1, button2);
 
     LOGIC::SaveCommand* SaveCommand = new LOGIC::SaveCommand(page);
-    buttonSave->SetCommand(SaveCommand);
+    button1->SetCommand(SaveCommand);
 
     LOGIC::TransitionCommand* TransitionCommand = new LOGIC::TransitionCommand(menuFSM, "Playing");
-    buttonTransition->SetCommand(TransitionCommand);
+    button2->SetCommand(TransitionCommand);
 
-    // page->ClickButton1();
-
+    page->ClickButton1();
     page->ClickButton2();
 
     return 0;
