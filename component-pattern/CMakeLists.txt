@@ -1,0 +1,1 @@
+add_executable(component-pattern mainComponent.cpp)

@@ -47,7 +47,7 @@ void LOGIC::TransitionCommand::execute()
     TargetFSM->requestTransition(StateToTransition);
 }
 
-int main()
+int mainCommand()
 {
     fmt::print("C++ standard: ");
     std::cout << __cplusplus << "\n";

@@ -20,5 +20,7 @@ FetchContent_MakeAvailable(fmt)
 ##
 
 add_subdirectory(command-pattern)
+add_subdirectory(component-pattern)
 
 target_link_libraries(command-pattern PRIVATE fmt::fmt)
+target_link_libraries(component-pattern PRIVATE fmt::fmt)
